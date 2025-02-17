@@ -1,4 +1,4 @@
-# BrainBoost – Professional Documentation
+# BrainBoost
 
 ---
 
