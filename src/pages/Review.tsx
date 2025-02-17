@@ -77,8 +77,8 @@ function Review() {
 
   if (!currentCard) {
     return (
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto text-center py-12 bg-black text-white">
-        <BoxIcon className="mx-auto h-12 w-12 text-white" />
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto text-center py-12 bg-white dark:bg-black text-black dark:text-white">
+        <BoxIcon className="mx-auto h-12 w-12 text-black dark:text-white" />
         <h3 className="mt-2 text-lg font-medium">No cards left</h3>
         <p className="mt-1 text-gray-400">Great job! You've viewed all the cards.</p>
       </motion.div>
@@ -86,13 +86,13 @@ function Review() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto bg-black text-white p-6 rounded-lg shadow-lg">
+    <div className="max-w-2xl mx-auto bg-white dark:bg-black text-black dark:text-white p-6 rounded-lg shadow-lg">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 text-center">
         <h1 className="text-3xl font-bold">Review Cards</h1>
         <p className="mt-2">{dueCount} card{dueCount !== 1 ? "s" : ""} left to review today</p>
       </motion.div>
 
-      <motion.div key={currentCard.id} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="card bg-black border border-gray-700 rounded-lg p-6">
+      <motion.div key={currentCard.id} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="card bg-white dark:bg-black border border-gray-700 rounded-lg p-6">
         <div className="min-h-[200px] flex items-center justify-center">
           <h2 className="text-xl text-center">{currentCard.question}</h2>
         </div>
@@ -114,11 +114,11 @@ function Review() {
             <button onClick={() => setShowAnswer(true)} className="btn-primary w-full bg-white text-black py-2 rounded-lg hover:bg-gray-300">Show Answer</button>
           ) : (
             <div className="flex space-x-4">
-              <button onClick={() => handleResponse(false)} className="flex-1 flex items-center justify-center bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg">
+              <button onClick={() => handleResponse(false)} className="flex-1 flex items-center justify-center bg-red-600 hover:bg-red-700 text-black dark:text-white py-2 rounded-lg">
                 <ThumbsDown className="w-5 h-5 mr-2" />
                 Got it Wrong
               </button>
-              <button onClick={() => handleResponse(true)} className="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg">
+              <button onClick={() => handleResponse(true)} className="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-700 text-black dark:text-white py-2 rounded-lg">
                 <ThumbsUp className="w-5 h-5 mr-2" />
                 Got it Right
               </button>
