@@ -80,7 +80,7 @@ function Navbar() {
             <div className="flex flex-col space-y-2">
               <Link
                 to="/"
-                className={`px-4 py-3 rounded-lg transition-all duration-200 ${isActive("/")
+                className={`px-4 py-3 rounded-lg transition-all duration-200 ${isActive("/dashboard")
                   ? "bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300"
                   : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
