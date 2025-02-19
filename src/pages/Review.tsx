@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, ThumbsUp, ThumbsDown, CalendarDays, BoxIcon } from "lucide-react";
+import { ThumbsUp, ThumbsDown, BoxIcon } from "lucide-react";
 import toast from "react-hot-toast";
 import api from "../lib/axios";
 import type { Flashcard } from "../types";
